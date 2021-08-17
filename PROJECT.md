@@ -12,7 +12,7 @@
 
 ### Там я нашёл замечательный датасет с информацией, о городах Беларуси. Вот так выглядит скриншот из excel [с этими данными](https://opendata.by/node/480), которые, если верить составителям, актуальны на 2017 год.
 
-![image.png](screenshot_1.png)
+![image.png](images/screenshot_1.png)
 
 ### В самом деле выглядит неплохо...тут почти 24 тысячи позиций! Я и не думал, что в нашей прекрасной стране может быть так много населённых пунктов. Только вот есть два маленьких недостатка этого набора данных в рамках решения моей задачи.
 
@@ -21,13 +21,13 @@
 
 ### Решение первого подпункта довольно очевидно: удаляем ненужные столбцы прямо в MS excel :)
 
-![image.png](screenshot_2.png)
+![image.png](images/screenshot_2.png)
 
 ### Я оставил только колонки "вобласць", "раён", "назва па-беларуску", "назва па-расейску" и "osm: node ID". А ещё сохранил это всё в csv формате как punkty_belarusi_cleaned_1.csv
 
 ### "Что такое node ID?" спросите вы? А я отвечу: это идентификационный номер элемента местности в системе [Open Street Maps](https://www.openstreetmap.org/)
 
-### C помощью этого номера можно получать информацию об объекте местности с использованием Open Street Maps API. Среди прочего, простым http запросом можно получить информацию и о широте/долготе населённого пункта, что и хочется мне сделать.
+### C помощью этого номера можно получать информацию об объекте местности с использованsием Open Street Maps API. Среди прочего, простым http запросом можно получить информацию и о широте/долготе населённого пункта, что и хочется мне сделать.
 
 ### Пришло время побаловаться с python: давайте получим информацию о городе Минск по вышеуказанной схеме.
 
@@ -156,7 +156,7 @@ print(req.get("https://api.openstreetmap.org/api/0.6/node/26162465").text)
 
 ### Нас интересуют два указанных поля (на скриншоте выделены красным)
 
-![image.png](screenshot_3.png)
+![image.png](images/screenshot_3.png)
 
 ### Несложно догадаться, что получать интересующие нас значения можно с помощью регулярных выражений :) Осталось автоматизировать остальной процесс. Воспользуемся Pandas и загрузим очищенную версию данных как csv.
 
@@ -1698,7 +1698,7 @@ filtered_plot(drawing_data, get_ending, drawing_endings)
 
 
     
-![png](output_34_0.png)
+![png](images/output_34_0.png)
     
 
 
@@ -1713,7 +1713,7 @@ filtered_plot(drawing_data, get_ending, ["цы"])
 
 
     
-![png](output_37_0.png)
+![png](images/output_37_0.png)
     
 
 
@@ -1728,7 +1728,7 @@ filtered_plot(drawing_data, get_ending, ["кі", "чы", "ка"])
 
 
     
-![png](output_40_0.png)
+![png](images/output_40_0.png)
     
 
 
@@ -1746,7 +1746,7 @@ filtered_plot(drawing_data, len, range(30))
 
 
     
-![png](output_43_0.png)
+![png](images/output_43_0.png)
     
 
 
@@ -1765,7 +1765,7 @@ filtered_plot(drawing_data, get_sh, range(1, 20))
 
 
     
-![png](output_46_0.png)
+![png](images/output_46_0.png)
     
 
 
@@ -1780,7 +1780,7 @@ filtered_plot(drawing_data, get_sh, [3])
 
 
     
-![png](output_49_0.png)
+![png](images/output_49_0.png)
     
 
 
@@ -1795,7 +1795,7 @@ filtered_plot(drawing_data, len, [5,6, 11, 12, 17, 18])
 
 
     
-![png](output_52_0.png)
+![png](images/output_52_0.png)
     
 
 
@@ -1820,7 +1820,7 @@ filtered_plot(drawing_data, count_special_letter_1, range(1, 10))
 
 
     
-![png](output_56_0.png)
+![png](images/output_56_0.png)
     
 
 
@@ -1833,7 +1833,7 @@ filtered_plot(drawing_data, count_special_letter_2, range(1, 10))
 
 
     
-![png](output_58_0.png)
+![png](images/output_58_0.png)
     
 
 
@@ -3558,7 +3558,7 @@ filtered_plot(drawing_data, get_ending, ["кі"])
 
 
     
-![png](output_70_0.png)
+![png](images/output_70_0.png)
     
 
 
@@ -3569,7 +3569,7 @@ filtered_plot(drawing_data, get_ending, ["чы"])
 
 
     
-![png](output_71_0.png)
+![png](images/output_71_0.png)
     
 
 
@@ -3580,7 +3580,7 @@ filtered_plot(drawing_data, get_ending, ["ка"])
 
 
     
-![png](output_72_0.png)
+![png](images/output_72_0.png)
     
 
 
@@ -3593,7 +3593,7 @@ filtered_plot(drawing_data, get_ending, ["ча"])
 
 
     
-![png](output_74_0.png)
+![png](images/output_74_0.png)
     
 
 
