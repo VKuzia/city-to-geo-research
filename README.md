@@ -8,7 +8,7 @@ Here my little research on the upper topic is stored. I used Python (Pandas, asy
 
 In files named PROJECT you can enjoy a russian version of my illustrated "research". Although it uses the basics of statistics, it does not pretend to be a real scientific article, so its content should be considered as entertaining stuff with an appropriate entertainig language and figuration.
 
-Here is a quick preview of the achieved results.
+The markdown version [PROJECT.md](PROJECT.md) can be read directly from github with no issue. All datasets mentioned are stored in "data" directory.
 
 ### Important note
 Have a nice day :)
