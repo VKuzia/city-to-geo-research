@@ -12,7 +12,7 @@
 
 ### Там я нашёл замечательный датасет с информацией, о городах Беларуси. Вот так выглядит скриншот из excel [с этими данными](https://opendata.by/node/480), которые, если верить составителям, актуальны на 2017 год.
 
-![image.png](attachment:image.png)
+![image.png](screenshot_1.png)
 
 ### В самом деле выглядит неплохо...тут почти 24 тысячи позиций! Я и не думал, что в нашей прекрасной стране может быть так много населённых пунктов. Только вот есть два маленьких недостатка этого набора данных в рамках решения моей задачи.
 
@@ -21,7 +21,7 @@
 
 ### Решение первого подпункта довольно очевидно: удаляем ненужные столбцы прямо в MS excel :)
 
-![image.png](attachment:image.png)
+![image.png](screenshot_2.png)
 
 ### Я оставил только колонки "вобласць", "раён", "назва па-беларуску", "назва па-расейску" и "osm: node ID". А ещё сохранил это всё в csv формате как punkty_belarusi_cleaned_1.csv
 
@@ -156,7 +156,7 @@ print(req.get("https://api.openstreetmap.org/api/0.6/node/26162465").text)
 
 ### Нас интересуют два указанных поля (на скриншоте выделены красным)
 
-![image.png](attachment:image.png)
+![image.png](screenshot_3.png)
 
 ### Несложно догадаться, что получать интересующие нас значения можно с помощью регулярных выражений :) Осталось автоматизировать остальной процесс. Воспользуемся Pandas и загрузим очищенную версию данных как csv.
 
@@ -168,7 +168,7 @@ import pandas as pd
 import numpy as np
 import math
 import re
-import aiohttp
+import aiohttps
 import asyncio
 import matplotlib.pyplot as plt
 from pandas import Series, DataFrame
